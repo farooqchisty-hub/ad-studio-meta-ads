@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad Studio v4 Scripts</title>
+<style>
+:root{--ink:#0f1a14;--mute:#5b6660;--line:#e3e7e4;--bg:#fbfbf8;--card:#fff;--green:#006A43;--mint:#C0FFA5;--red:#b42318;--amber:#9a6700}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:28px;margin:0 0 6px}
+h2{font-size:22px;margin:44px 0 6px;padding-top:18px;border-top:2px solid var(--ink)}
+h3{font-size:15px;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+p{margin:6px 0}
+.lede{color:var(--mute);margin-bottom:18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.box.core{border-left:5px solid var(--green)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.reuse{background:#e8f3ee;color:var(--green)}
+.new{background:#fff1d6;color:var(--amber)}
+.tts{background:#eef0ff;color:#3943b7}
+.cut{background:#fde8e6;color:var(--red)}
+.key{background:var(--green);color:#fff}
+table.script{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.script td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+table.script tr:first-child td{border-top:0}
+table.script td.n{width:28px;color:var(--mute);font-weight:700}
+table.script td.w{width:52px;color:var(--mute);font-size:13px;text-align:right}
+table.script td.s{width:150px}
+.line{font-size:16px}
+.sb{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.shot .imgs{display:flex;gap:2px;background:#111}
+.shot .imgs img{flex:1;min-width:0;height:200px;object-fit:cover;display:block}
+.shot .ph{height:200px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;background:repeating-linear-gradient(45deg,#f2f4f2,#f2f4f2 10px,#e9ece9 10px,#e9ece9 20px);color:var(--mute);font-size:13px}
+.shot .meta{padding:10px 12px;font-size:13px}
+.shot .t{font-weight:700;font-size:12px;color:var(--mute);display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.shot .pic{margin-top:6px}
+.shot .vo{margin-top:6px;font-style:italic;color:#2a3a31}
+.cutlist li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr} table.script td.s{width:auto} table.script td.w{display:none}}
+.pair{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pair figure{margin:0;text-align:center;font-size:12px;color:var(--mute)}
+.pair img{width:150px;border-radius:8px;display:block;border:1px solid var(--line)}
+.arrow{font-size:28px;color:var(--green)}
+.ok{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+ul{margin:6px 0 6px 20px;padding:0}
+.small{font-size:13px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Ad Studio Meta ads: v4 scripts and storyboards</h1>
+<p class="lede">Five films (c01, c03, c04, c05, c08), rewritten around what the Clone feature actually does. Nothing is generated until you approve. 29 Oct.</p>
+
+<div class="box core">
+<h3 style="margin-top:0">What I understood</h3>
+<p><b>The problem:</b> every brand starts each new ad from a blank page. They guess at ideas, don't know which ones to test, and pay to find out which ones flop.</p>
+<p><b>The insight:</b> other brands in your category have already done that testing. If a brand keeps an ad live for more than <b>60 days</b>, it is selling. Nobody keeps paying for an ad that doesn't.</p>
+<p><b>The feature:</b> Ad Radar in Brevo Ad Studio shows you those long-running ads from real brands in your niche. You pick one and hit <b>Clone for my product</b>. It rebuilds <b>that same ad</b>, with the same layout, the same hook and the same structure, around your product, brand and offer, and you launch it in seconds.</p>
+<p><b>The payoff:</b> you skip ideation and guesswork and start from an ad that is already proven in your category.</p>
+</div>
+
+<div class="box">
+<h3 style="margin-top:0">Rules applied to every film</h3>
+<ul>
+<li><b>The two-year ad is cited once at most</b>, as one striking example. The signal everywhere else is "live for more than 60 days".</li>
+<li><b>Every clone result is the same ad rebuilt</b>: same template, same layout, same hook, with Glowday in it. This is Ad Studio's real guided clone of the Norse ad, shown below. The library statics (breakup text and so on) no longer appear as a "clone". They only appear where the film shows "ads it made for you" in general.</li>
+<li><b>Cut</b>: the corkboard "OLD AD? / TESTED IDEA" clip, the DAY 1 to 730 rail, the "PROVEN IDEA" stickers, and every repeat of "two years".</li>
+<li>Unchanged from v3: Addendum 1 (exact boxes, colours), "Brevo Ad Studio" said at least twice, the CTA "Start for free. Your first three ads are free.", AI footage at native speed, presenter on screen for about 70% or more.</li>
+</ul>
+<div class="pair" style="margin-top:12px">
+<figure><img src="img/norse.jpg" alt="Norse Organics original ad"><figcaption>Their winning ad (Norse, live 2 years)</figcaption></figure>
+<span class="arrow">&rarr;</span>
+<figure><img src="img/clone.jpg" alt="Glowday clone in the same template"><figcaption><span class="ok">v4 clone result</span>: same ad, your product</figcaption></figure>
+<figure style="margin-left:18px"><img src="img/g10.jpg" alt="Library breakup-text ad"><figcaption><span class="no">v3.1 (wrong)</span>: a different template</figcaption></figure>
+</div>
+</div>
+
+<div class="box">
+<h3 style="margin-top:0">What changes per film</h3>
+<table class="script">
+<tr><td class="n">c01</td><td><b>Rewrite.</b> New spine: blank page, then 60-day winners, then clone. Keeps 4 takes, needs 3 new Veo clips.</td><td class="s">about $9.60 (up to $19.20 with regenerations)</td></tr>
+<tr><td class="n">c05</td><td><b>Rewrite of the middle.</b> The Radar and clone beats are rebuilt. The maths now works: 5 ads from the link plus 4 clones is 9 ads. Keeps 5 takes, needs 3 new Veo clips, plus 3 more guided clones made in Ad Studio.</td><td class="s">about $9.60 (up to $19.20), plus in-app credits</td></tr>
+<tr><td class="n">c08</td><td><b>Rewrite.</b> Faceless narrator, so it is TTS only. Same new spine, and "90 days" becomes "60 days".</td><td class="s">under $1</td></tr>
+<tr><td class="n">c03</td><td><b>Script unchanged</b> (it's about AI creators). The outro visual is fixed: a Radar winner with a 60+ DAYS chip, then its same-template clone.</td><td class="s">$0</td></tr>
+<tr><td class="n">c04</td><td><b>Script unchanged</b> except the agent outro, whose clip is already made. Same outro visual fix as c03.</td><td class="s">$0</td></tr>
+</table>
+<p class="small">Each film's $20 cap for v3 is mostly spent (c01 $16.21, c05 $19.58). This round needs a fresh cap of about $20 each for c01 and c05.</p>
+</div>
+
+<!-- ============ C01 ============ -->
+<h2>c01 · "Copy What Already Works" <span class="small">(was The 2-Year Ad) · LP Winners · about 55 s · 157 words</span></h2>
+<h3>Script</h3>
+<table class="script">
+<tr><td class="n">1</td><td class="line">"This ad, from a skincare brand just like yours, has been running for two years, and nobody keeps an ad running that long unless it sells."</td><td class="w">26 w</td><td class="s"><span class="tag reuse">REUSE n1</span> the only 2-year line</td></tr>
+<tr><td class="n">2</td><td class="line">"Most brands start every new ad from a blank page, guessing which ideas to test and paying to find out which ones flop."</td><td class="w">23 w</td><td class="s"><span class="tag new">NEW Veo</span> corridor walk</td></tr>
+<tr><td class="n">3</td><td class="line">"Brevo Ad Studio's Ad Radar shows you the ads other brands in your category keep running, and anything live past sixty days is a proven seller."</td><td class="w">26 w</td><td class="s"><span class="tag new">NEW Veo</span> sunlit office. Brand line 1</td></tr>
+<tr><td class="n">4</td><td class="line">"With Brevo Ad Studio, you can copy that exact winning ad for your own product and launch it in seconds."</td><td class="w">19 w</td><td class="s"><span class="tag reuse">REUSE n2b</span></td></tr>
+<tr><td class="n">5</td><td class="line">"It rebuilds the same idea around your product, your brand and your offer, so the hook stays and everything else becomes yours."</td><td class="w">23 w</td><td class="s"><span class="tag reuse">REUSE c5b</span> white studio, kraft box</td></tr>
+<tr><td class="n">6</td><td class="line">"So instead of guessing what to test, you launch an ad that's already proven to sell in your category."</td><td class="w">19 w</td><td class="s"><span class="tag new">NEW Veo</span> sidewalk walk</td></tr>
+<tr><td class="n">7</td><td class="line">"Try Brevo Ad Studio today. Start for free, your first three ads are free. Tap below and find your winning ads."</td><td class="w">21 w</td><td class="s"><span class="tag reuse">REUSE n3b</span> Brand line 2 + CTA</td></tr>
+</table>
+<h3>Storyboard</h3>
+<div class="sb">
+<div class="shot"><div class="imgs"><img src="img/c01_hookfull.jpg" alt=""><img src="img/c01_hook.jpg" alt=""></div><div class="meta"><div class="t"><span>0 to 7.7 s · full, then split</span><span class="tag reuse">REUSE</span></div><div class="pic">Screen studio. The Norse ad slams in, then the real Radar detail panel with "2 years · Time active" boxed (top half).</div><div class="vo">Line 1</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c01_corr.jpg" alt=""></div><div class="meta"><div class="t"><span>7.7 to 14.8 s · full + overlays</span><span class="tag new">NEW take, same setup</span></div><div class="pic">Corridor walk-and-talk. Overlays in free space: a blank canvas card with a blinking cursor, "?" idea cards, and a USD test-budget counter draining, with FLOP stamps.</div><div class="vo">Line 2</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c01_office.jpg" alt=""></div><div class="meta"><div class="t"><span>14.8 to 23 s · split</span><span class="tag new">NEW take, same setup</span></div><div class="pic">Top: the real Ad Radar grid in Beauty, sorted Longest running. "60+ DAYS" chips pop onto the long-runners and the Norse ad is boxed. Bottom: her in the sunlit office. Lockup on "Brevo Ad Studio".</div><div class="vo">Line 3</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c01_ui.jpg" alt=""></div><div class="meta"><div class="t"><span>23 to 29.5 s · full-screen 4 s, then presenter</span><span class="tag reuse">REUSE</span></div><div class="pic">The real UI recording: open the Norse ad, then the detail panel, then a zoom-through on "Clone for my product". She returns with the LIVE IN 00:03 chip.</div><div class="vo">Line 4</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/norse.jpg" alt=""><img src="img/clone.jpg" alt=""></div><div class="meta"><div class="t"><span>29.5 to 37 s · split, KEY 3.5 s</span><span class="tag key">KEY</span></div><div class="pic">The Norse original and the Glowday guided clone side by side, in the same template. Labels: SAME LAYOUT, SAME HOOK, YOUR PRODUCT. Slow push-in with a dimmed surround, and a box on the swapped words. Below: her with the kraft box.</div><div class="vo">Line 5</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c01_side.jpg" alt=""></div><div class="meta"><div class="t"><span>37 to 43.5 s · full + overlays</span><span class="tag new">NEW take, same setup</span></div><div class="pic">Sidewalk walk. The "?" cards burst one by one, and a "PROVEN IN YOUR CATEGORY" chip lands.</div><div class="vo">Line 6</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c01_cta.jpg" alt=""></div><div class="meta"><div class="t"><span>43.5 to 51 s · full + split</span><span class="tag reuse">REUSE</span></div><div class="pic">CTA: the Brevo Ad Studio lockup, START FOR FREE, a $0 row of 3 free ads, and down arrows.</div><div class="vo">Line 7</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c01_end.jpg" alt=""></div><div class="meta"><div class="t"><span>51 to 54 s · end card</span><span class="tag reuse">REWORD</span></div><div class="pic">"Copy what already works." "Start for free. Your first 3 ads are free." Button: Find my winning ads.</div></div></div>
+</div>
+<h3>Cut from v3.1</h3>
+<div class="pair"><figure><img src="img/c01_cork.jpg" alt=""><figcaption><span class="tag cut">CUT</span> corkboard "OLD AD? / TESTED IDEA"</figcaption></figure></div>
+<ul class="cutlist small"><li>The c2 line "Most ads are switched off within a few weeks... an ad that runs for two years is a proven idea", which was the second 2-year mention.</li><li>The c6 line "an idea that already spent two years proving itself", the third mention, and the DAY 1 to 730 rail.</li><li>The PROVEN IDEA and TESTED IDEA stickers, and the g10 breakup-text ad as the "clone".</li></ul>
+
+<!-- ============ C05 ============ -->
+<h2>c05 · "Nine Ads Before Lunch" <span class="small">LP Winners · about 57 s · 163 words</span></h2>
+<h3>Script</h3>
+<table class="script">
+<tr><td class="n">1</td><td class="line">"I made nine ads for a sunscreen brand before lunch today, in less time than it takes to brief a designer. Here's how I did it."</td><td class="w">26 w</td><td class="s"><span class="tag reuse">REUSE c1</span></td></tr>
+<tr><td class="n">2</td><td class="line">"I pasted one product link into Brevo Ad Studio, and it pulled in the photos, the price and the reviews all by itself."</td><td class="w">23 w</td><td class="s"><span class="tag reuse">REUSE n2b</span> Brand line 1 (weakest Brevo, see note)</td></tr>
+<tr><td class="n">3</td><td class="line">"It even set up the brand's colors and fonts, and five finished ads came back in about a minute."</td><td class="w">19 w</td><td class="s"><span class="tag reuse">REUSE c3</span></td></tr>
+<tr><td class="n">4</td><td class="line">"But I didn't want to guess which ones to test, so I opened Ad Radar to see what skincare brands keep running."</td><td class="w">21 w</td><td class="s"><span class="tag new">NEW Veo</span> street side-track</td></tr>
+<tr><td class="n">5</td><td class="line">"When a brand keeps an ad live past sixty days, it's selling, and this one's been running for two years."</td><td class="w">20 w</td><td class="s"><span class="tag new">NEW Veo</span> street selfie, tube. Only 2-year line</td></tr>
+<tr><td class="n">6</td><td class="line">"So I cloned four winners for my own sunscreen, same layout, same hook, just my product and my offer."</td><td class="w">19 w</td><td class="s"><span class="tag new">NEW Veo</span> brownstone steps</td></tr>
+<tr><td class="n">7</td><td class="line">"That's nine ads before lunch from one product link, and I never opened a design tool once."</td><td class="w">17 w</td><td class="s"><span class="tag reuse">REUSE c6</span></td></tr>
+<tr><td class="n">8</td><td class="line">"Try Brevo Ad Studio and find your own winning ads. Start for free. Your first three ads are free."</td><td class="w">19 w</td><td class="s"><span class="tag reuse">REUSE n7</span> Brand line 2 + CTA</td></tr>
+</table>
+<p class="small">The old middle is replaced: "I picked one that's been live for two years... nobody keeps an ad running for two years... copied that exact winning ad." It mentioned two years twice and showed one clone, which didn't add up to nine.</p>
+<h3>Storyboard</h3>
+<div class="sb">
+<div class="shot"><div class="imgs"><img src="img/c05_1.5.jpg" alt=""><img src="img/c05_5.jpg" alt=""></div><div class="meta"><div class="t"><span>0 to 7 s · full, then split</span><span class="tag reuse">KEEP</span></div><div class="pic">Café walk-in, "9 ADS BEFORE LUNCH". Split: a designer brief still typing next to the Ad Studio grid.</div><div class="vo">Line 1</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_8.jpg" alt=""><img src="img/c05_12.jpg" alt=""></div><div class="meta"><div class="t"><span>7 to 14 s · full, then split</span><span class="tag reuse">KEEP</span></div><div class="pic">The product-link pill and the lockup, then the real store import: photos, $34.00, reviews.</div><div class="vo">Line 2</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_15.5.jpg" alt=""><img src="img/c05_18.5.jpg" alt=""></div><div class="meta"><div class="t"><span>14 to 20 s · full, then split</span><span class="tag reuse">KEEP</span></div><div class="pic">Brand-kit colours and fonts, then five library ads fanning in, "about a minute".</div><div class="vo">Line 3</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_21.jpg" alt=""><img src="img/c05_23.jpg" alt=""></div><div class="meta"><div class="t"><span>20 to 27 s · full, then split</span><span class="tag new">NEW take, same setup</span></div><div class="pic">Street side-track. Split: the real Ad Radar filtered to Beauty and sorted Longest running, with a "which one do I test?" sticker that gets crossed out.</div><div class="vo">Line 4</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_27.jpg" alt=""><img src="img/c05_32.jpg" alt=""></div><div class="meta"><div class="t"><span>27 to 34 s · full-screen, KEY 3 s</span><span class="tag key">KEY</span></div><div class="pic">"60+ DAYS" chips land on several long-runners, then a push-in to the Norse detail panel with "2 years · Time active" boxed and the surround dimmed. Back to her selfie with the tube.</div><div class="vo">Line 5</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/norse.jpg" alt=""><img src="img/clone.jpg" alt=""></div><div class="meta"><div class="t"><span>34 to 41 s · full-screen, KEY 4 s</span><span class="tag key">KEY</span></div><div class="pic">Four pairs, original then its Glowday clone in the same template. The hero pair is Norse to Glowday, held with labels SAME LAYOUT, SAME HOOK, MY PRODUCT. Three more pairs flip in after it, each made in Ad Studio from a real Radar winner.</div><div class="vo">Line 6</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_43.jpg" alt=""><img src="img/c05_47.jpg" alt=""></div><div class="meta"><div class="t"><span>41 to 47 s · full, then split</span><span class="tag reuse">KEEP</span></div><div class="pic">Nine ads fly in around her (5 library ads plus 4 clones), "1 link = 9 ads", then the design tool crossed out.</div><div class="vo">Line 7</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_50.jpg" alt=""><img src="img/c05_54.jpg" alt=""></div><div class="meta"><div class="t"><span>47 to 54 s · full, then split</span><span class="tag reuse">KEEP</span></div><div class="pic">Lockup, START FOR FREE, and your first 3 ads marked 1, 2, 3 FREE.</div><div class="vo">Line 8</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c05_57.jpg" alt=""></div><div class="meta"><div class="t"><span>54 to 57 s · end card</span><span class="tag reuse">KEEP</span></div><div class="pic">"Nine ads before lunch." with the 9-ad wall and Start for free.</div></div></div>
+</div>
+<p class="small">Option: line 2's "Brevo" is the weakest pronunciation of all five films, and its two generations are used. It could be regenerated as a fresh clip for about $3.20 if you want it cleaner.</p>
+
+<!-- ============ C08 ============ -->
+<h2>c08 · "Same Ad, Your Product" <span class="small">LP Winners · faceless narrator · about 58 s · 177 words</span></h2>
+<h3>Script</h3>
+<table class="script">
+<tr><td class="n">1</td><td class="line">"Every new ad starts the same way: a blank page, a guess, and a test budget you hope isn't wasted."</td><td class="w">19 w</td><td class="s"><span class="tag tts">TTS</span></td></tr>
+<tr><td class="n">2</td><td class="line">"But brands in your category have already run those tests, and the ads they keep running are the ones that sell."</td><td class="w">21 w</td><td class="s"><span class="tag tts">TTS</span></td></tr>
+<tr><td class="n">3</td><td class="line">"With Brevo Ad Studio, Ad Radar shows you those ads, sorted by how long they've been live."</td><td class="w">16 w</td><td class="s"><span class="tag tts">TTS</span> Brand line 1</td></tr>
+<tr><td class="n">4</td><td class="line">"Anything still running after sixty days is a proven seller. This skincare ad has been live for two years."</td><td class="w">19 w</td><td class="s"><span class="tag tts">TTS</span> only 2-year line</td></tr>
+<tr><td class="n">5</td><td class="line">"It isn't the tins or the brand that sells it. It's the hook, the structure, the proof and the offer."</td><td class="w">20 w</td><td class="s"><span class="tag tts">TTS</span></td></tr>
+<tr><td class="n">6</td><td class="line">"So pick a winner and hit Clone for my product. It rebuilds that same ad, same layout and same hook, around your product, your brand and your offer."</td><td class="w">28 w</td><td class="s"><span class="tag tts">TTS</span></td></tr>
+<tr><td class="n">7</td><td class="line">"Same ad, your product, ready to launch in seconds."</td><td class="w">9 w</td><td class="s"><span class="tag tts">TTS</span></td></tr>
+<tr><td class="n">8</td><td class="line">"No more guessing what to test. You start from an ad that's already proven in your category."</td><td class="w">17 w</td><td class="s"><span class="tag tts">TTS</span></td></tr>
+<tr><td class="n">9</td><td class="line">"Start for free. Your first three ads are free, and plans start at nineteen dollars a month."</td><td class="w">17 w</td><td class="s"><span class="tag tts">TTS</span> CTA</td></tr>
+<tr><td class="n">10</td><td class="line">"Tap below and find your winning ads with Brevo Ad Studio today."</td><td class="w">12 w</td><td class="s"><span class="tag tts">TTS</span> Brand line 2</td></tr>
+</table>
+<p class="small">Dropped from v3: the repeated "two-year skincare ad", "ninety days", and the "paste a product link, five ads in a minute" detour, so the film stays on the clone story.</p>
+<h3>Storyboard</h3>
+<div class="sb">
+<div class="shot"><div class="ph">NEW scene: a blank ad canvas with a blinking cursor. "?" idea cards stack up, and a test-budget meter drains in USD.</div><div class="meta"><div class="t"><span>0 to 6 s</span><span class="tag new">NEW GFX</span></div><div class="vo">Line 1</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c08_27.jpg" alt=""></div><div class="meta"><div class="t"><span>6 to 12 s</span><span class="tag reuse">ADAPT</span></div><div class="pic">The real Ad Radar grid in Beauty: many brands' ads. The canvas "?" cards fly into the grid and become real ads.</div><div class="vo">Line 2</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c08_31.jpg" alt=""></div><div class="meta"><div class="t"><span>12 to 17 s</span><span class="tag reuse">ADAPT</span></div><div class="pic">The Brevo Ad Studio lockup lands over Radar, and the sort switches to Longest running.</div><div class="vo">Line 3</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c08_2.jpg" alt=""><img src="img/c08_12.jpg" alt=""></div><div class="meta"><div class="t"><span>17 to 24 s · KEY 3.5 s</span><span class="tag key">KEY</span></div><div class="pic">"60+ DAYS" chips stamp onto the long-runners, then a push-in to the Norse ad with "2 years · Time active" boxed from measured bounds.</div><div class="vo">Line 4</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c08_17.jpg" alt=""><img src="img/c08_22.jpg" alt=""></div><div class="meta"><div class="t"><span>24 to 31 s</span><span class="tag reuse">KEEP</span></div><div class="pic">NOT THE TINS and NOT THE BRAND, then the anatomy: hook, structure, proof, offer, each lit on the real ad.</div><div class="vo">Line 5</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/norse.jpg" alt=""><img src="img/clone.jpg" alt=""></div><div class="meta"><div class="t"><span>31 to 41 s · KEY 4 s</span><span class="tag key">KEY</span></div><div class="pic">The real UI: pick the ad, then click "Clone for my product". A wipe rebuilds Norse into the Glowday clone in the same template. Labels: SAME LAYOUT, SAME HOOK, YOUR PRODUCT.</div><div class="vo">Line 6</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/clone.jpg" alt=""></div><div class="meta"><div class="t"><span>41 to 44 s</span><span class="tag reuse">ADAPT</span></div><div class="pic">"Same ad, your product." The clone with a LAUNCH button and a 00:03 stopwatch.</div><div class="vo">Line 7</div></div></div>
+<div class="shot"><div class="ph">NEW scene: the "?" cards from scene 1 cross out one by one, and a "PROVEN IN YOUR CATEGORY" stamp lands on the clone.</div><div class="meta"><div class="t"><span>44 to 49 s</span><span class="tag new">NEW GFX</span></div><div class="vo">Line 8</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c08_53.jpg" alt=""></div><div class="meta"><div class="t"><span>49 to 55 s</span><span class="tag reuse">KEEP</span></div><div class="pic">Start for free, your first 3 ads (library ads), FREE tags, the $19 card.</div><div class="vo">Line 9</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c08_57.jpg" alt=""></div><div class="meta"><div class="t"><span>55 to 58 s</span><span class="tag reuse">KEEP</span></div><div class="pic">End card: Brevo Ad Studio, "Same ad. Your product.", Start for free.</div><div class="vo">Line 10</div></div></div>
+</div>
+
+<!-- ============ C03 ============ -->
+<h2>c03 · "I'm Not Real" <span class="small">LP Agent · script unchanged · visual fix in the outro only</span></h2>
+<p>This film is about AI creators, not cloning, so the script stays as in v3.1. The outro line "Paste your product link into the chat, and the agent does everything, from finding you a winning ad to launching it." now shows the clone correctly:</p>
+<div class="sb">
+<div class="shot"><div class="imgs"><img src="img/c03_44.jpg" alt=""></div><div class="meta"><div class="t"><span>43 to 46 s</span><span class="tag reuse">KEEP</span></div><div class="pic">Paste the Glowday product link.</div><div class="vo">"Paste your product link into the chat, and the agent does everything,"</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/c03_49.jpg" alt=""></div><div class="meta"><div class="t"><span>46 to 49 s</span><span class="tag new">FIX</span></div><div class="pic">The Ad Radar winner with a "60+ DAYS" chip and an exact box. Replaces the static "long-running winners" panel.</div><div class="vo">"from finding you a winning ad"</div></div></div>
+<div class="shot"><div class="imgs"><img src="img/norse.jpg" alt=""><img src="img/clone.jpg" alt=""></div><div class="meta"><div class="t"><span>49 to 51 s</span><span class="tag new">FIX</span></div><div class="pic">That ad rebuilt as Glowday in the same template, with LAUNCH. Replaces g06 ("Stop wearing chalk").</div><div class="vo">"to launching it."</div></div></div>
+</div>
+
+<!-- ============ C04 ============ -->
+<h2>c04 · "The Three-Week Wait" <span class="small">LP Agent · script unchanged except the agent outro</span></h2>
+<p>Lines 1 to 7 stay as in v3. The new last line is already generated and transcribes clean: "Paste your product link into the chat, and the agent does everything, from finding you a winning ad to launching it." It is followed by the existing CTA "It's called Brevo Ad Studio... Start for free. Your first three ads are free." The visuals under the outro follow c03: Radar winner with 60+ DAYS, then its same-template clone. The re-cut was paused mid-edit until you approve.</p>
+<div class="sb">
+<div class="shot"><div class="imgs"><img src="img/c04_50.jpg" alt=""><img src="img/c04_53.jpg" alt=""></div><div class="meta"><div class="t"><span>outro</span><span class="tag new">FIX</span></div><div class="pic">Claire says the new agent line, then the existing "It's called Brevo Ad Studio" CTA. Under "finding you a winning ad to launching it": the Radar winner, then its same-template clone, as in c03. The 3 FREE ADS stack switches to library ads (Addendum 1).</div></div></div>
+</div>
+
+<div class="box" style="margin-top:40px">
+<h3 style="margin-top:0">To go ahead I need</h3>
+<ul>
+<li>Your OK on the five scripts, or edits to them.</li>
+<li>A fresh cap of about $20 each for c01 and c05 (6 new Veo clips in total, 720p, at most 2 generations each).</li>
+<li>For c05: OK to make 3 more guided clones in Ad Studio from real Radar winners (about 45 credits).</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
