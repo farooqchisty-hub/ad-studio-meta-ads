@@ -145,7 +145,7 @@ DECIDE = [
  ['User', 'Grace', 'Maya, Rilo\'s founder', ''],
  ['Competitor ads', 'Bloom, Huel', 'Olipop, Poppi, Liquid Death, Athletic Brewing (unblurred, per your rule)', 'Our clone sources already.'],
  ['Ending', '"Point A", no logo', 'The loop closes, then a 3.25 s launch lockup: "Introducing Brevo Ads. Clone any winning ad." plus the free-ads offer', 'A launch film must end on the name and where to get it.'],
- ['Format', '1280 x 720, 60 fps', '1920 x 1080, 60 fps, 97.25 s', 'Same length, same beat grid.'],
+ ['Format', '1280 x 720, 60 fps, music only', '1920 x 1080, 60 fps, 113.2 s, voiceover', 'Longer than the source because the voice leads the picture.'],
 ]
 SWAPS = [
  ['Reads 12,000+ reviews', 'Takes apart 40 winners: hooks, layouts, offers', 'Matches "the agent takes it apart".'],
@@ -236,6 +236,25 @@ SCRIPT = [
  ['94.12', 'Wordmark', 'Brevo Ads (capsule beside it, LED READY)'],
  ['94.85', 'Line', 'Clone any winning ad.'],
  ['95.15', 'CTA', 'ads.brevo.com · Your first 3 ads are free'],
+]
+
+
+# ---------------------------------------------------------------- voice and picture (v5, the voice leads)
+VOP = [
+ ['0.0 to 8.4', 'This is Maya. She makes a really good peach soda called Rilo, but she never has time for ads. So she pastes one link into <span class="g">Brevo Ads</span>.', 'Her store in a browser. Slow push on the can. Her to-do note: New flavor ✓, Restock cans ✓, Make ads ☐ circled in red. She selects the URL, "Copied". Push into the bar: Welcome to Brevo Ads, Maya. The link is pasted and sent.'],
+ ['8.8 to 16.9', 'Brevo Ads reads her store like a very keen new hire, and learns her product, her colours, her tone, and every fact on the can.', 'The URL streams into the capsule as dots. Her photos fly past. LED READY, the beat drops. The kit folder flicks one card per word: Product, Colors, Voice, Facts.'],
+ ['17.5 to 28.6', 'Then <span class="g">Ad Radar</span> finds ads that are already winning in her category. This Olipop ad has run for a hundred and eighty-two days, and nobody pays for an ad that long unless it sells.', 'Ride to B, Ad Radar. Real winners scroll past. The Olipop ad comes forward, 182 days live counts up, "Still running. That\'s a winner." Saved to Radar.'],
+ ['29.0 to 32.9', 'So it takes the winners apart: the hook, the layout and the offer.', '"Taking apart 40 winners". Hook, Layout and Offer are outlined on three real winners as each word is spoken.'],
+ ['33.6 to 41.2', 'Next, it finds three ways to talk about Rilo: to gut-health fans, to people quitting soda, and to whoever hosts mocktail night.', 'Ride to C. Three angle cards flip to video, one per phrase, each with two reasons on leader lines.'],
+ ['42.0 to 54.7', 'Then it suggests thirty new ads, and Maya says yes, obviously. Every winner gets cloned for Rilo: the same hook here, the same layout there, and her own numbers on this one. It even clones video, scene by scene.', 'Ride to D. "Let\'s make 30 new ads from your winners." Maya: "Yes pls!" Four pairs, each joined by a drawn bridge on its phrase: Olipop, Same hook. Graza, Same layout. Liquid Death, Her own numbers. Poppi video, Scene by scene.'],
+ ['55.2 to 63.3', 'It makes fresh videos from her product photos too. <i>Jess: "Wait, wait, this is soda? It literally tastes like a peach ring."</i> That\'s thirty ads, ready to launch, in every size.', '"Made from your product photos": six video styles. Jess\'s take plays with its own sound. 30 ads burst out. "All 30 are ready to launch." Export all. The library: "Done. 30 ads, every size."'],
+ ['64.1 to 75.0', 'Her rivals post creator videos every day. Maya posts about once a month. So Brevo Ads casts five A.I. creators, and when she wants someone a little older, it swaps him in.', '"Your rivals post creator videos daily. You post monthly." Maya: "Ouch. Fair. Yes." "Let\'s cast 5 AI creators for TikTok, Reels and Shorts." Five creators. "Can we try someone older for Leo?" The mosaic re-casts him. "Perfect, approve all."'],
+ ['76.1 to 83.7', 'The creators film the videos. <i>Leo: "Honestly, this used to be my 3 p.m. soda."</i> It writes the captions, and her next thirty days are planned.', '"These are the videos I made for you." Three creator videos; Leo\'s line plays. Captions for TikTok, Instagram and YouTube. "Your next 30 days, planned." The calendar fills.'],
+ ['84.6 to 89.6', 'A week later, Maya drops in her results. Ad four won, because it felt like a friend\'s story.', 'Ride to E, Week 1. "Week 1 is in!" Split-flap board: WEEK 1 RESULTS. "Ad 4 won." Bars rise against the account average (labelled Demo data).'],
+ ['90.1 to 95.1', 'So for week two, it makes six fresh takes on that winner, plus a static for her feed.', '"For week 2, let\'s make 6 clones of your own winner." Six cards fan out on "six". "Your winner works as a static too." The card flips to the static.'],
+ ['95.8 to 101.2', 'And this morning, Ad Radar spotted a new winner, so a Rilo version is already waiting.', '"Btw, Radar caught a new winner this morning." A real ad from the Meta Ad Library: Vita Pop, 2 days live, 5 versions running. It flips: "I made a Rilo version for you."'],
+ ['101.7 to 106.2', 'That\'s the loop: find what wins, make it yours, and do it again next week.', 'The capsule laps the whole line with a train of ads behind it. A ring bursts at A · Start. LED READY.'],
+ ['107.5 to 113.2', '<b>Brevo Ads.</b> Clone any winning ad. Your first three ads are free.', 'Introducing / Brevo Ads / Clone any winning ad. / ads.brevo.com · Your first 3 ads are free. The last chord lands on the lockup and rings out.'],
 ]
 
 # ---------------------------------------------------------------- screenplay
@@ -451,20 +470,27 @@ footer{color:var(--mute);font-size:13px;padding:50px 0 60px}
 html = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Loop: Brevo Ads film playbook</title>
-<meta name="description" content="Frame-by-frame teardown of Fastlane's 97 s launch film, the style playbook, and a 97.25 s script and screenplay for Brevo Ads.">
+<meta name="description" content="Frame-by-frame teardown of Fastlane's 97 s launch film, the style playbook, and the 113.2 s voiced launch film for Brevo Ads.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head>
 <body>
-<nav class="top"><div class="wrap"><a href="#film">Film</a><a href="#source">Source</a><a href="#teardown">Teardown</a><a href="#playbook">Playbook</a><a href="#brevo">Brevo version</a><a href="#script">Script</a><a href="#screenplay">Screenplay</a><a href="#post">Launch post</a><a href="#claims">Claims</a><a href="#production">Production</a></div></nav>
+<nav class="top"><div class="wrap"><a href="#film">Film</a><a href="#source">Source</a><a href="#teardown">Teardown</a><a href="#playbook">Playbook</a><a href="#brevo">Brevo version</a><a href="#script">Voice and picture</a><a href="#post">Launch post</a><a href="#claims">Claims</a><a href="#production">Production</a></div></nav>
 <main class="wrap">
 <div class="kicker">Brevo Ads launch film · Playbook · 21 Nov 2026</div>
 <h1>The Loop</h1>
-<p class="lede">Fastlane's launch film, taken apart frame by frame. Then rebuilt as the 97.25 s launch film for Brevo Ads: same rhythm, its own look, and only claims we can stand behind.</p>
+<p class="lede">Fastlane's launch film, taken apart frame by frame. Then rebuilt as the launch film for Brevo Ads: 113.2 s with a voiceover that leads the picture, its own look, and only claims we can stand behind.</p>
 
-<h2 id="film">The film: Brevo Ads launch, v2</h2>
-<p>97.25 s, built in HyperFrames. This is a 720p copy for phones; the 1080p 60 fps master is sent separately.</p>
+<h2 id="film">The film: Brevo Ads launch, v5 with voiceover</h2>
+<p>113.2 s, built in HyperFrames. The voice leads: every move, mark and line lands on the word that names it. This is a 720p copy for phones; the 1080p 60 fps master is sent separately.</p>
 <video src="film.mp4" poster="poster.jpg" controls playsinline preload="metadata" style="width:100%;border-radius:16px;border:1px solid var(--line);background:#000;display:block"></video>
+<div class="card"><h4 style="margin-top:0">What changed from v2</h4>{ul([
+ '<b>Voiceover:</b> one warm narrator (ElevenLabs voice "Hope", 0.92 speed), recorded one paragraph per take so the sentences flow. Brevo is said BRAY-vo.',
+ '<b>The voice leads:</b> the picture was re-timed to the voice, word by word. Nothing moves before it is named, and the film grew from 97.25 s to 113.2 s to give each idea room.',
+ '<b>New opening:</b> Maya in her own store, her to-do list with "Make ads" circled, then the link pasted into Brevo Ads.',
+ '<b>Markings redrawn:</b> outlines draw on with a soft halo and a light sweep, labels sit on leader lines, and each clone pair is joined by a drawn bridge with its label on the arc.',
+ '<b>Calmer pace:</b> fewer, longer beats. Extra bubbles, the second Radar save and the phone swaps are gone; key frames hold while the voice explains them.',
+])}</div>
 <h2 id="source">1. The source at a glance</h2>
 <p><a href="{SRC}">Fastlane on X: "Today we're introducing Claude for Ads"</a></p>
 <div class="stats">
@@ -554,15 +580,11 @@ html = f'''<!doctype html>
 <p>Fastlane shows features we can\'t claim for Brevo Ads. Each one gets a true replacement that keeps the beat.</p>
 {table(['Fastlane beat', 'Brevo Ads beat', 'Note'], SWAPS, 'wide')}
 
-<h2 id="script">5. Script: every word on screen</h2>
-<p>No voiceover, like the source. The script is the chat, headers, chips and three creator lines. Green marks the one highlighted word per line.</p>
-{table(['Time', 'Who', 'Line'], SCRIPT)}
+<h2 id="script">5. Voiceover and picture</h2>
+<p>The full narration, timed to the film. The right column is what the viewer sees while each line is spoken. Creator lines are the clips\' own sound.</p>
+{table(['Time (s)', 'Voice', 'Picture'], VOP, 'wide')}
 
-<h2 id="screenplay">6. Screenplay: 97.25 s</h2>
-<p>18 scenes and 4 loop rides. Scene times match the source beat for beat until 94.00 s. The launch lockup takes the last 3.25 s. One 120 BPM track fits.</p>
-{scenes_html()}
-
-<h2 id="post">7. Launch post</h2>
+<h2 id="post">6. Launch post</h2>
 <p>Fastlane's film never says "introducing". Its post does. Ours ships with one too. The film itself is built: see the delivery note below.</p>
 <div class="two">
 <div class="card"><h4 style="margin-top:0">X</h4><p style="white-space:pre-line;margin:0">Today we're launching Brevo Ads.
@@ -590,17 +612,17 @@ Your first 3 ads are free at ads.brevo.com</p></div>
  'The film ends on a launch lockup, not a loop restart: Introducing, Brevo Ads, the line, the offer.',
  'Demo data stays labelled on screen. At launch, every number gets screenshotted.',
 ])}</div>
-<h2 id="claims">8. Claims check</h2>
+<h2 id="claims">7. Claims check</h2>
 {table(['Claim', 'Status', 'Note'], CLAIMS, 'wide')}
 
-<h2 id="production">9. Production notes</h2>
+<h2 id="production">8. Production notes</h2>
 <div class="card">{ul([
- '<b>Build:</b> HyperFrames (HTML and GSAP), 1920 x 1080, 60 fps, 97.25 s. Reuse the Brevo Ads launch film kit: palette tokens and Inter.',
+ '<b>Build:</b> HyperFrames (HTML and GSAP), 1920 x 1080, 60 fps, 113.2 s. Reuse the Brevo Ads launch film kit: palette tokens and Inter.',
  '<b>Capsule:</b> one 3D render in three angles (front, three-quarter, side). The LED window is live HTML in a dot-matrix font, so it can scroll any text.',
  '<b>Loop line:</b> an SVG path in perspective. Grey dots ahead, green dots behind. Station pills are HTML.',
  '<b>Media we have:</b> 9 winning statics and the Poppi video (brevo-ads-launch/src), 18 Rilo static clones and 1 Rilo video clone, 3 Rilo photos.',
  '<b>Media to make:</b> 6 style videos, 5 AI creator portraits, 3 creator videos (2 with lines), 3 angle loops, 6 winner variants, 3 fresh Radar winners. Real AI video in every slot, never stills.',
- '<b>Music:</b> an original 120 BPM track. Soft 6 s intro, drop at 6.0 s, gated breakdowns under chat, re-drops at 30.0, 52.0, 87.0 and 92.0 s, real last chord on the 94.0 s cut, ringing out under the lockup.',
+ '<b>Sound:</b> voice at -16 LUFS on top. An original 120 BPM track sits under it and dips about 8 dB while she speaks. The drop lands on READY at 11.9 s, the last chord on the lockup at 107.9 s.',
  '<b>Your standing rules applied:</b> text tilts at most 12 degrees (Fastlane tilts its table about 25). Reading lines face camera for at least 1.2 s. 12 to 22 quiet SFX cues. Music ducks under creator lines. No dead air.',
  '<b>Domain check:</b> drinkrilo.com is unregistered today, so the typed URL points at no real business.',
 ])}</div>
