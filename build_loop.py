@@ -144,7 +144,7 @@ DECIDE = [
  ['Demo brand', 'AG1 (real)', 'Rilo Peach Yuzu Prebiotic Soda (fictional, our store page)', 'No implied endorsement. 18 static clones and 1 video clone already made in-app on 10 Nov.'],
  ['User', 'Grace', 'Maya, Rilo\'s founder', ''],
  ['Competitor ads', 'Bloom, Huel', 'Olipop, Poppi, Liquid Death, Athletic Brewing (unblurred, per your rule)', 'Our clone sources already.'],
- ['Ending', '"Point A", no logo', 'The loop closes into the lockup: "Brevo Ads. Clone any winning ad."', 'Your outro rule: a value line, not a bare URL.'],
+ ['Ending', '"Point A", no logo', 'The loop closes, then a 3.25 s launch lockup: "Introducing Brevo Ads. Clone any winning ad. Live today."', 'A launch film must end on the name and where to get it.'],
  ['Format', '1280 x 720, 60 fps', '1920 x 1080, 60 fps, 97.25 s', 'Same length, same beat grid.'],
 ]
 SWAPS = [
@@ -230,8 +230,12 @@ SCRIPT = [
  'Outro',
  ['90.50', 'LED', 'BREVO ADS → NEXT: WEEK 2'],
  ['92.00', 'LED', 'READY'],
- ['94.75', 'Station', 'A · Start'],
- ['95.20', 'Lockup', 'Brevo Ads · Clone any winning ad. · ads.brevo.com · Your first 3 ads are free'],
+ ['93.40', 'Station', 'A · Start'],
+ ['94.00', 'Kicker', 'Introducing'],
+ ['94.00', 'Wordmark', 'Brevo Ads'],
+ ['94.00', 'LED', 'LIVE TODAY'],
+ ['95.25', 'Line', 'Clone any winning ad.'],
+ ['96.00', 'CTA', 'Live today at ads.brevo.com · Your first 3 ads are free'],
 ]
 
 # ---------------------------------------------------------------- screenplay
@@ -336,11 +340,16 @@ SCENES = [
    ('Action', 'The capsule avatar flies out of the bubble to centre and grows. The LED marquee scrolls, then snaps to READY.'),
    ('On screen', 'BREVO ADS → NEXT: WEEK 2 → READY'),
    ('Sound', 'Stabs, then <b>re-drop at 92.00</b> on READY.')]),
- ('SC17 · Loop closes and lockup', '92.50 to 97.25', [
-   ('Camera', 'Crane to the full loop. Chase. Hard cut at 94.75 to the start station.'),
-   ('Action', 'The capsule laps the line, trailing every ad it made. Stations A to E tick green. At 94.75 it reaches "A · Start". A ring of green ticks bursts out, and the loop line draws into the lockup.'),
-   ('On screen', 'Brevo Ads · Clone any winning ad. · ads.brevo.com · Your first 3 ads are free'),
-   ('Sound', 'Music lands its real last chord under the lockup.')]),
+ ('SC17 · Loop closes', '92.50 to 94.00', [
+   ('Camera', 'Crane to the full loop. Fast chase.'),
+   ('Action', 'The capsule laps the line, trailing every ad it made. Stations A to E tick green. At 93.40 it pulls into "A · Start" and a ring of green ticks bursts out.'),
+   ('On screen', 'A · Start'),
+   ('Sound', 'Full groove.')]),
+ ('SC18 · Launch lockup', '94.00 to 97.25', [
+   ('Camera', 'Hard cut at 94.00 to a clean frame. Slow 3 percent push.'),
+   ('Action', 'The loop line draws itself into a thin green ring behind the wordmark. The capsule glides in and parks beside it, LED reading LIVE TODAY. "Introducing" fades in above. The line lands at 95.25, the call to action at 96.00. Hold.'),
+   ('On screen', 'Introducing / <b>Brevo Ads</b> / Clone any winning ad. / Live today at ads.brevo.com · Your first 3 ads are free'),
+   ('Sound', 'The real last chord hits on the 94.00 cut and rings out. No stinger.')]),
 ]
 
 CLAIMS = [
@@ -360,7 +369,8 @@ CLAIMS = [
  ['Re-cast a creator from options', '<span class="chk">Confirm in-app</span>', ''],
  ['Agent reads a dropped results file', '<span class="no">Not known</span>', 'Fallback: Maya says "Ad 4 won" herself. Chart stays.'],
  ['Week 1 chart numbers', '<span class="chk">Illustrative</span>', 'Fictional brand. "Demo data" microline on screen.'],
- ['"Your first 3 ads are free"', '<span class="chk">Confirm</span>', 'Offer used on 10 Nov. Check it is still live.'],
+ ['"Your first 3 ads are free"', '<span class="chk">Confirm</span>', 'Offer used on 10 Nov. Check it is the launch offer.'],
+ ['"Live today"', '<span class="chk">Confirm</span>', 'True only on launch day. Swap for the date if the film posts early.'],
 ]
 
 LOOP_SVG = '''<svg viewBox="0 0 720 300" role="img" aria-label="The Loop: a metro loop line with stations A to E and the Brevo Ads capsule riding it" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
@@ -447,11 +457,11 @@ html = f'''<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head>
 <body>
-<nav class="top"><div class="wrap"><a href="#source">Source</a><a href="#teardown">Teardown</a><a href="#playbook">Playbook</a><a href="#brevo">Brevo version</a><a href="#script">Script</a><a href="#screenplay">Screenplay</a><a href="#claims">Claims</a><a href="#production">Production</a></div></nav>
+<nav class="top"><div class="wrap"><a href="#source">Source</a><a href="#teardown">Teardown</a><a href="#playbook">Playbook</a><a href="#brevo">Brevo version</a><a href="#script">Script</a><a href="#screenplay">Screenplay</a><a href="#post">Launch post</a><a href="#claims">Claims</a><a href="#production">Production</a></div></nav>
 <main class="wrap">
-<div class="kicker">Brevo Ads · Film playbook · 21 Nov 2026</div>
+<div class="kicker">Brevo Ads launch film · Playbook · 21 Nov 2026</div>
 <h1>The Loop</h1>
-<p class="lede">Fastlane's launch film, taken apart frame by frame. Then rebuilt as a 97.25 s Brevo Ads film with the same rhythm, its own look and only claims we can stand behind.</p>
+<p class="lede">Fastlane's launch film, taken apart frame by frame. Then rebuilt as the 97.25 s launch film for Brevo Ads: same rhythm, its own look, and only claims we can stand behind.</p>
 
 <h2 id="source">1. The source at a glance</h2>
 <p><a href="{SRC}">Fastlane on X: "Today we're introducing Claude for Ads"</a></p>
@@ -547,20 +557,49 @@ html = f'''<!doctype html>
 {table(['Time', 'Who', 'Line'], SCRIPT)}
 
 <h2 id="screenplay">6. Screenplay: 97.25 s</h2>
-<p>17 scenes and 4 loop rides. Scene times match the source beat for beat, so one 120 BPM track fits.</p>
+<p>18 scenes and 4 loop rides. Scene times match the source beat for beat until 94.00 s. The launch lockup takes the last 3.25 s. One 120 BPM track fits.</p>
 {scenes_html()}
 
-<h2 id="claims">7. Claims check</h2>
+<h2 id="post">7. Launch post</h2>
+<p>Fastlane's film never says "introducing". Its post does. Ours ships with one too.</p>
+<div class="two">
+<div class="card"><h4 style="margin-top:0">X</h4><p style="white-space:pre-line;margin:0">Today we're launching Brevo Ads.
+
+Paste your product link. It finds the ads already winning in your category. Then it clones them for your brand.
+
+Statics, video and AI creators.
+
+Your first 3 ads are free: ads.brevo.com</p></div>
+<div class="card"><h4 style="margin-top:0">LinkedIn</h4><p style="white-space:pre-line;margin:0">Today we're launching Brevo Ads: an AI ad agent for ecommerce brands.
+
+Paste your product link. Then it:
+· learns your product, colours and voice
+· finds the ads already winning in your category
+· clones them for your brand, statics and video
+· casts AI creators for TikTok, Reels and Shorts
+
+Run it again next week. It finds new winners every time.
+
+Your first 3 ads are free at ads.brevo.com</p></div>
+</div>
+<div class="card"><h4 style="margin-top:0">What changes because it is the launch</h4>{ul([
+ 'The product is named in the first second (LED and headline) and in the last 3.25 s.',
+ 'Every hero feature gets one beat: brand learning, Ad Radar, angles, static clones, video clones, video styles, AI creators.',
+ 'The film ends on a launch lockup, not a loop restart: Introducing, Brevo Ads, the line, live today.',
+ 'The capsule LED reads LIVE TODAY in the lockup.',
+ 'Demo data stays labelled on screen. At launch, every number gets screenshotted.',
+])}</div>
+<h2 id="claims">8. Claims check</h2>
 {table(['Claim', 'Status', 'Note'], CLAIMS, 'wide')}
 
-<h2 id="production">8. Production notes</h2>
+<h2 id="production">9. Production notes</h2>
 <div class="card">{ul([
  '<b>Build:</b> HyperFrames (HTML and GSAP), 1920 x 1080, 60 fps, 97.25 s. Reuse the Brevo Ads launch film kit: palette tokens and Inter.',
  '<b>Capsule:</b> one 3D render in three angles (front, three-quarter, side). The LED window is live HTML in a dot-matrix font, so it can scroll any text.',
  '<b>Loop line:</b> an SVG path in perspective. Grey dots ahead, green dots behind. Station pills are HTML.',
  '<b>Media we have:</b> 9 winning statics and the Poppi video (brevo-ads-launch/src), 18 Rilo static clones and 1 Rilo video clone, 3 Rilo photos.',
  '<b>Media to make:</b> 6 style videos, 5 AI creator portraits, 3 creator videos (2 with lines), 3 angle loops, 6 winner variants, 3 fresh Radar winners. Real AI video in every slot, never stills.',
- '<b>Music:</b> an original 120 BPM track. Soft 6 s intro, drop at 6.0 s, gated breakdowns under chat, re-drops at 30.0, 52.0, 87.0 and 92.0 s, real last chord under the lockup.',
+ '<b>Music:</b> an original 120 BPM track. Soft 6 s intro, drop at 6.0 s, gated breakdowns under chat, re-drops at 30.0, 52.0, 87.0 and 92.0 s, real last chord on the 94.0 s cut, ringing out under the lockup.',
  '<b>Your standing rules applied:</b> text tilts at most 12 degrees (Fastlane tilts its table about 25). Reading lines face camera for at least 1.2 s. 12 to 22 quiet SFX cues. Music ducks under creator lines. No dead air.',
  '<b>Domain check:</b> drinkrilo.com is unregistered today, so the typed URL points at no real business.',
 ])}</div>
