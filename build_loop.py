@@ -144,7 +144,7 @@ DECIDE = [
  ['Demo brand', 'AG1 (real)', 'Rilo Peach Yuzu Prebiotic Soda (fictional, our store page)', 'No implied endorsement. 18 static clones and 1 video clone already made in-app on 10 Nov.'],
  ['User', 'Grace', 'Maya, Rilo\'s founder', ''],
  ['Competitor ads', 'Bloom, Huel', 'Olipop, Poppi, Liquid Death, Athletic Brewing (unblurred, per your rule)', 'Our clone sources already.'],
- ['Ending', '"Point A", no logo', 'The loop closes, then a 3.25 s launch lockup: "Introducing Brevo Ads. Clone any winning ad. Live today."', 'A launch film must end on the name and where to get it.'],
+ ['Ending', '"Point A", no logo', 'The loop closes, then a 3.25 s launch lockup: "Introducing Brevo Ads. Clone any winning ad." plus the free-ads offer', 'A launch film must end on the name and where to get it.'],
  ['Format', '1280 x 720, 60 fps', '1920 x 1080, 60 fps, 97.25 s', 'Same length, same beat grid.'],
 ]
 SWAPS = [
@@ -162,6 +162,7 @@ SWAPS = [
 SCRIPT = [
  'A · Start: your brand',
  ['0.80', 'Headline', 'Welcome to <span class="g">Brevo Ads</span>, Maya'],
+ ['0.00', 'LED', 'HELLO'],
  ['1.30', 'Input', 'drinkrilo.com'],
  ['3.45', 'LED', 'DRINKRILO.COM'],
  ['4.00', 'Status', 'Pulling product photos 22% · Reading the store page 54% · Finding your offer 78% · Learning the voice 100%'],
@@ -189,13 +190,12 @@ SCRIPT = [
  ['27.90', 'Maya', 'Yes pls!'],
  ['28.40', 'Brevo Ads', 'Cloning them for Rilo now.'],
  ['30.40', 'Chips', 'Olipop · Winning ad → "Cloning for Rilo" → Rilo · Your clone · Same hook · For Gut-health fans'],
- ['32.80', 'Chips', 'Liquid Death → Rilo · Same layout · For Soda quitters'],
- ['33.93', 'Chips', 'Athletic Brewing → Rilo · Same headline · Same proof tiles'],
+ ['32.80', 'Chips', 'Graza → Rilo · Same headline · For Soda quitters'],
+ ['33.93', 'Chips', 'Liquid Death → Rilo · Same comparison · Same proof tiles · For Soda quitters'],
  ['35.03', 'Chips', 'Poppi video → Rilo video · Scene by scene · Same pacing · For Mocktail hosts'],
  ['36.60', 'Brevo Ads', 'Plus new videos, made from your <span class="g">product photos</span>.'],
  ['38.00', 'Format chips', 'Creator-style · Product drop · Stop motion · Dolly shot · Sliding products · Bold and cinematic (each "for" an angle)'],
- ['38.30', 'Creator clip', '"Wait, this is soda? It tastes like a peach ring."'],
- ['40.00', 'Creator clip', '"Three grams of sugar. I\'m switching."'],
+ ['38.20', 'Creator clip', '"Wait, wait, this is soda? It literally tastes like a peach ring. Three grams of sugar? Okay, I\'m switching. Bye."'],
  ['45.00', 'Brevo Ads', 'All <span class="g">30</span> are ready to launch. [Export all]'],
  ['47.60', 'Chip', 'Done. 30 ads, every size.'],
  ['48.40', 'Brevo Ads', 'Your rivals post creator videos daily. You post <span class="g">monthly</span>.'],
@@ -209,11 +209,11 @@ SCRIPT = [
  ['56.00', 'Maya', 'Perfect, approve all'],
  ['56.50', 'Brevo Ads', 'These are the videos I made for you.'],
  ['56.80', 'Chips', 'Day in the life · 3 pm swap · Taste test'],
- ['57.40', 'Creator clip', '"This used to be my 3 pm soda. Now it\'s a Rilo."'],
+ ['57.00', 'Creator clip', '"Honestly? This used to be my 3 p.m. soda. Now it\'s a Rilo. Way better."'],
  ['62.00', 'Brevo Ads', 'Captions written for TikTok, Instagram and YouTube.'],
  ['65.50', 'Brevo Ads', '5 creators, 12 videos each. <span class="g">60</span> in all.'],
  ['67.00', 'Brevo Ads', 'Your next <span class="g">30 days</span>, planned.'],
- ['67.80', 'Counter', '38 → 60 posts ready'],
+ ['67.60', 'Counter', '0 → 60 posts ready'],
  'E · Week 1',
  ['70.80', 'Maya', '[file: week-1-results.csv] Week 1 is in!'],
  ['71.20', 'Board', 'WEEK 1 RESULTS'],
@@ -222,20 +222,20 @@ SCRIPT = [
  ['75.50', 'Brevo Ads', 'For week 2, let\'s make <span class="g">6</span> clones of your own winner.'],
  ['76.50', 'Brevo Ads', 'New creators, new kitchens. Same winning script 🍑'],
  ['78.50', 'Brevo Ads', 'Your winner works as a <span class="g">static</span> too.'],
- ['81.00', 'Chip', 'Ad 4 · Static · For your feed'],
+ ['79.60', 'Chip', 'Ad 4 · Static · For your feed (the Rilo "Crush your cravings" static)'],
  ['82.50', 'Brevo Ads', 'Btw, Radar caught a <span class="g">new winner</span> this morning.'],
- ['83.00', 'Stats', 'New winner 1 of 3 · Live 9 days · 14 versions running'],
+ ['83.30', 'Stats', 'Real ads from the Meta Ad Library: Vita Pop (2 days live, 5 versions running) · wildwonder (1 day live) · Kivvy (5 days live)'],
+ ['86.70', 'Chip', 'Rilo · Your version · Same format, your can, your creator'],
  ['86.00', 'Brevo Ads', 'I made a <span class="g">Rilo version</span> for you.'],
  ['88.60', 'Brevo Ads', 'Ready for week 2?'],
  'Outro',
  ['90.50', 'LED', 'BREVO ADS → NEXT: WEEK 2'],
  ['92.00', 'LED', 'READY'],
  ['93.40', 'Station', 'A · Start'],
- ['94.00', 'Kicker', 'Introducing'],
- ['94.00', 'Wordmark', 'Brevo Ads'],
- ['94.00', 'LED', 'LIVE TODAY'],
- ['95.25', 'Line', 'Clone any winning ad.'],
- ['96.00', 'CTA', 'Live today at ads.brevo.com · Your first 3 ads are free'],
+ ['94.05', 'Kicker', 'Introducing'],
+ ['94.12', 'Wordmark', 'Brevo Ads (capsule beside it, LED READY)'],
+ ['94.85', 'Line', 'Clone any winning ad.'],
+ ['95.15', 'CTA', 'ads.brevo.com · Your first 3 ads are free'],
 ]
 
 # ---------------------------------------------------------------- screenplay
@@ -347,8 +347,8 @@ SCENES = [
    ('Sound', 'Full groove.')]),
  ('SC18 · Launch lockup', '94.00 to 97.25', [
    ('Camera', 'Hard cut at 94.00 to a clean frame. Slow 3 percent push.'),
-   ('Action', 'The loop line draws itself into a thin green ring behind the wordmark. The capsule glides in and parks beside it, LED reading LIVE TODAY. "Introducing" fades in above. The line lands at 95.25, the call to action at 96.00. Hold.'),
-   ('On screen', 'Introducing / <b>Brevo Ads</b> / Clone any winning ad. / Live today at ads.brevo.com · Your first 3 ads are free'),
+   ('Action', 'The capsule glides in and parks beside the wordmark, LED reading READY. The wordmark wipes in. "Introducing" fades in above. The line lands at 94.85, the call to action at 95.15. Hold to the end.'),
+   ('On screen', 'Introducing / <b>Brevo Ads</b> / Clone any winning ad. / ads.brevo.com · Your first 3 ads are free'),
    ('Sound', 'The real last chord hits on the 94.00 cut and rings out. No stinger.')]),
 ]
 
@@ -369,8 +369,7 @@ CLAIMS = [
  ['Re-cast a creator from options', '<span class="chk">Confirm in-app</span>', ''],
  ['Agent reads a dropped results file', '<span class="no">Not known</span>', 'Fallback: Maya says "Ad 4 won" herself. Chart stays.'],
  ['Week 1 chart numbers', '<span class="chk">Illustrative</span>', 'Fictional brand. "Demo data" microline on screen.'],
- ['"Your first 3 ads are free"', '<span class="chk">Confirm</span>', 'Offer used on 10 Nov. Check it is the launch offer.'],
- ['"Live today"', '<span class="chk">Confirm</span>', 'True only on launch day. Swap for the date if the film posts early.'],
+ ['"Your first 3 ads are free"', '<span class="ok">Confirmed</span>', 'Launch offer, confirmed 21 Nov.'],
 ]
 
 LOOP_SVG = '''<svg viewBox="0 0 720 300" role="img" aria-label="The Loop: a metro loop line with stations A to E and the Brevo Ads capsule riding it" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
@@ -457,12 +456,15 @@ html = f'''<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head>
 <body>
-<nav class="top"><div class="wrap"><a href="#source">Source</a><a href="#teardown">Teardown</a><a href="#playbook">Playbook</a><a href="#brevo">Brevo version</a><a href="#script">Script</a><a href="#screenplay">Screenplay</a><a href="#post">Launch post</a><a href="#claims">Claims</a><a href="#production">Production</a></div></nav>
+<nav class="top"><div class="wrap"><a href="#film">Film</a><a href="#source">Source</a><a href="#teardown">Teardown</a><a href="#playbook">Playbook</a><a href="#brevo">Brevo version</a><a href="#script">Script</a><a href="#screenplay">Screenplay</a><a href="#post">Launch post</a><a href="#claims">Claims</a><a href="#production">Production</a></div></nav>
 <main class="wrap">
 <div class="kicker">Brevo Ads launch film · Playbook · 21 Nov 2026</div>
 <h1>The Loop</h1>
 <p class="lede">Fastlane's launch film, taken apart frame by frame. Then rebuilt as the 97.25 s launch film for Brevo Ads: same rhythm, its own look, and only claims we can stand behind.</p>
 
+<h2 id="film">The film: Brevo Ads launch, v2</h2>
+<p>97.25 s, built in HyperFrames. This is a 720p copy for phones; the 1080p 60 fps master is sent separately.</p>
+<video src="film.mp4" poster="poster.jpg" controls playsinline preload="metadata" style="width:100%;border-radius:16px;border:1px solid var(--line);background:#000;display:block"></video>
 <h2 id="source">1. The source at a glance</h2>
 <p><a href="{SRC}">Fastlane on X: "Today we're introducing Claude for Ads"</a></p>
 <div class="stats">
@@ -561,7 +563,7 @@ html = f'''<!doctype html>
 {scenes_html()}
 
 <h2 id="post">7. Launch post</h2>
-<p>Fastlane's film never says "introducing". Its post does. Ours ships with one too.</p>
+<p>Fastlane's film never says "introducing". Its post does. Ours ships with one too. The film itself is built: see the delivery note below.</p>
 <div class="two">
 <div class="card"><h4 style="margin-top:0">X</h4><p style="white-space:pre-line;margin:0">Today we're launching Brevo Ads.
 
@@ -585,8 +587,7 @@ Your first 3 ads are free at ads.brevo.com</p></div>
 <div class="card"><h4 style="margin-top:0">What changes because it is the launch</h4>{ul([
  'The product is named in the first second (LED and headline) and in the last 3.25 s.',
  'Every hero feature gets one beat: brand learning, Ad Radar, angles, static clones, video clones, video styles, AI creators.',
- 'The film ends on a launch lockup, not a loop restart: Introducing, Brevo Ads, the line, live today.',
- 'The capsule LED reads LIVE TODAY in the lockup.',
+ 'The film ends on a launch lockup, not a loop restart: Introducing, Brevo Ads, the line, the offer.',
  'Demo data stays labelled on screen. At launch, every number gets screenshotted.',
 ])}</div>
 <h2 id="claims">8. Claims check</h2>
